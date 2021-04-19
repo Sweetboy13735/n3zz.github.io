@@ -105,8 +105,58 @@
           font-weight: 300;
       }
       
+      nav ul {
+          list-style: none;
+      }
+      
+      .flex {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+      }
+      
       /* Navigation overlay styles */
-      nav.nav-overlay {}
+      nav.nav-overlay {
+          background-color: rgba(20, 20, 20, 0.95);
+          height: 0;
+          overflow-y: hidden;
+          position: fixed;
+          text-align: center;
+          transition-property: height;
+          width: 100%;
+      }
+      
+      .nav-overlay .toggle {
+          background-color: transparent;
+          border: 1px solid currentColor;
+          border-radius: 5px;
+          color: var(--white);
+          font: inherit;
+          font-size: 12.5px;
+          height: 30px;
+          left: 15px;
+          position: fixed;
+          top: 15px;
+          transition-property: border-radius;
+          width: 30px;
+      }
+      
+      .nav-overlay .toggle:focus {
+          outline: none;
+      }
+      
+      .nav-overlay .toggle:hover {
+          border-radius: 7.5px;
+      }
+      
+      .nav-overlay .menu li {
+          margin: 15px 0;
+      }
+      
+      .nav-overlay .menu a {
+          font-size: 1.75rem;
+          text-decoration: none;
+      }
       
       /* Header styles */
       header {}
