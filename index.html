@@ -105,8 +105,8 @@
           font-weight: 300;
       }
       
-      /* Navigation bar styles */
-      nav.nav-bar {}
+      /* Navigation overlay styles */
+      nav.nav-overlay {}
       
       /* Header styles */
       header {}
@@ -126,8 +126,24 @@
     </style>
   </head>
   <body>
-    <!-- Navigation bar structure -->
-    <nav class="nav-bar"></nav>
+    <!-- Navigation overlay structure -->
+    <nav class="flex nav-overlay">
+      <button class="toggle" onclick="toggleNavOverlay()">☰</button>
+      <ul class="menu">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="./about.html">About me</a>
+        </li>
+        <li>
+          <a href="./portfolio.html">My portfolio</a>
+        </li>
+        <li>
+          <a href="./contact.html">Contact me</a>
+        </li>
+      </ul>
+    </nav>
     
     <!-- Header structure -->
     <header></header>
