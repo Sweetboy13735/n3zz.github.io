@@ -205,6 +205,14 @@
     <footer></footer>
     
     <!-- Scripts -->
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      var navOverlayToggled = false, navOverlay = document.querySelector("nav.nav-overlay"), navOverlayToggle = document.querySelector(".nav-overlay .toggle");
+      
+      function toggleNavOverlay() {
+        navOverlayToggled = !navOverlayToggled;
+        navOverlay.style.height = navOverlayToggled ? "100vh" : "0";
+        navOverlayToggle.innerHTML = navOverlayToggled ? "×" : "☰";
+      }
+    </script>
   </body>
 </html>
