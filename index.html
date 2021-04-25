@@ -31,7 +31,7 @@
           box-sizing: border-box;
           margin: 0;
           padding: 0;
-          transition: none 450ms cubic-bezier(0.75, 0.25, 0, 0.9);
+          transition: none var(--anim-props);
       }
       
       :root {
@@ -39,6 +39,9 @@
           --black: #141414;
           --gray: #1B1B1B;
           --white: #F8F8F8;
+          
+          /* Animation/transition properties */
+          --anim-props: 450ms cubic-bezier(0.75, 0.25, 0, 0.9);
       }
       
       html {
@@ -65,7 +68,7 @@
       }
       
       a:hover::before {
-          animation: block 450ms cubic-bezier(0.75, 0.25, 0, 0.9);
+          animation: block var(--anim-props);
       }
       
       h1 {
@@ -245,7 +248,7 @@
       
       function toggleNavOverlay() {
         navOverlayToggled = !navOverlayToggled;
-        navOverlay.style.height = navOverlayToggled ? "100vh" : "0";
+        navOverlay.style.height = navOverlayToggled ? "calc(100vh - 25px)" : null;
         navOverlayToggle.innerHTML = navOverlayToggled ? "×" : "☰";
       }
     </script>
