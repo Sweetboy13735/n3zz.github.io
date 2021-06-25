@@ -190,12 +190,14 @@
       /* Main content styles */
       main {}
       
+      aside.pseudonym-info {
+          bottom: 0;
+          position: fixed;
+      }
+      
       /* Footer styles */
       footer {
           background-color: var(--black);
-          bottom: 0;
-          position: fixed;
-          width: 100%;
       }
       
       /* Responsive styling */
@@ -212,16 +214,16 @@
       <button class="toggle" onclick="toggleNavOverlay()">☰</button>
       <ul class="menu container">
         <li>
-          <a href="#">Home</a>
+          <a href="#" onclick="toggleNavOverlay()">Home</a>
         </li>
         <li>
-          <a href="./about.html">About me</a>
+          <a href="#about" onclick="toggleNavOverlay()">About me</a>
         </li>
         <li>
-          <a href="./portfolio.html">My portfolio</a>
+          <a href="#portfolio" onclick="toggleNavOverlay()">My portfolio</a>
         </li>
         <li>
-          <a href="./contact.html">Contact me</a>
+          <a href="#contact" onclick="toggleNavOverlay()">Contact me</a>
         </li>
       </ul>
     </nav>
@@ -235,12 +237,17 @@
     </header>
     
     <!-- Main content structure -->
-    <main></main>
+    <main class="container">
+      <section id="about"></section>
+      <section id="portfolio"></section>
+      <section id="contact"></section>
+      <aside class="pseudonym-info">
+        <p>Ary Yakos is a pseudonym - Anyone who has the same name is purely coincidental.</p>
+      </aside>
+    </main>
     
     <!-- Footer structure -->
-    <footer>
-      <p>Ary Yakos is a pseudonym - Anyone who has the same name is purely coincidental.</p>
-    </footer>
+    <footer></footer>
     
     <!-- Scripts -->
     <script type="text/javascript">
