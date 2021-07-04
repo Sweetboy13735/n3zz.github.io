@@ -72,27 +72,31 @@
       }
       
       h1 {
-          font-size: 2.5rem;
+          font-size: 2.5em;
       }
       
       h2 {
-          font-size: 1.75rem;
+          font-size: 1.75em;
       }
       
       h3 {
-          font-size: 1.5rem;
+          font-size: 1.5em;
       }
       
       h4 {
-          font-size: 1.25rem;
+          font-size: 1.25em;
       }
       
       h5 {
-          font-size: 1rem;
+          font-size: 1em;
       }
       
       h6 {
-          font-size: 0.875rem;
+          font-size: 0.875em;
+      }
+      
+      p {
+          margin: 1rem 0;
       }
       
       h1, h2, h3, h4, h5, h6 {
@@ -146,6 +150,7 @@
           text-align: center;
           transition-property: height;
           width: 100%;
+          z-index: 1;
       }
       
       .nav-overlay .toggle {
@@ -195,6 +200,18 @@
           position: fixed;
       }
       
+      #otw {
+          color: #999
+      }
+      
+      #htb {
+          color: #9fef00;
+      }
+      
+      #tpdc {
+          color: #07a6ea;
+      }
+      
       /* Footer styles */
       footer {
           background-color: var(--black);
@@ -237,13 +254,20 @@
     </header>
     
     <!-- Main content structure -->
-    <main class="container">
-      <section id="about"></section>
-      <section id="portfolio"></section>
-      <section id="contact"></section>
-      <aside class="pseudonym-info">
-        <p>Ary Yakos is a pseudonym - Anyone who has the same name is purely coincidental.</p>
-      </aside>
+    <main>
+      <section id="about" class="container">
+        <h2>About me</h2>
+        <p>
+          Hello, I am Ary!
+          <br />
+          My real name is Amritesh, but I also go by some other aliases (Namely Amri, Tesh, & n3zz). I'm a 19 year-old Computer Science student aspiring to pursue a career in Cyber-Security. In addition to my 7+ years in coding experience, I have a small amount of knowledge in Web Design & Development, and I'm currently learning technologies such as JavaScript, PHP and Java. I have experience in both Python (Flask/Django) and JS (React) Web frameworks. You can find out more details in my <a href="#portfolio">Portfolio</a> below.
+        </p>
+        <p>My first hand experience with Cyber Security is my encounter with Cyber Discovery, and my own experience with Kali Linux, GNS and Cisco Packet Tracer. I've also gained practical skills on legal hacking sites such as <a id="otw" href="https://overthewire.org" target="_blank">OverTheWire</a> and <a id="htb" href="https://www.hackthebox.eu/" target="_blank">HackTheBox</a>. I know all the basics it requires to make a network safe and secure as possible. Additionally I am also working on getting my Security+ and CEH.</p>
+        <p>In addition to programming, I have deep passion for video games and seeing what makes them tick. When I'm not digging around in Cyber-Security research or tinkering with my Raspberry Pi, I'm making text based adventure game prototypes, as well as developing games with my friends. In addition to this, I'm the proud owner of a small community called <a id="tpdc" href="https://ThePseudoDopamineCentre.github.io" target="_blank">The Pseudo Dopamine Centre</a>.</p>
+      </section>
+      <section id="portfolio" class="container"></section>
+      <section id="contact" class="container"></section>
+      <aside class="pseudonym-info">Ary Yakos is a pseudonym - Anyone who has the same name is purely coincidental.</aside>
     </main>
     
     <!-- Footer structure -->
